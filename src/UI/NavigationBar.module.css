@@ -4,3 +4,8 @@
     place-items: center;
     min-width: 15vw;
 }
+
+.title{
+    min-width: 500px;
+    text-align: center;
+}

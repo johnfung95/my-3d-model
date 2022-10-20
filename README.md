@@ -6,5 +6,6 @@
 - The animations are accquire by transforming the *.glb* file to *.fbx* file. Then the *.fbx* file was uploaded to Mixamo
     - the animations can be selected for the uploaded avatar
     - and then convert the downloaded animation from *.fbx* to *.glb* through the Blender editor
+- The website is deployed to firebase
 
 Reference: https://dev.to/nourdinedev/how-to-use-threejs-and-react-to-render-a-3d-model-of-your-self-4kkf

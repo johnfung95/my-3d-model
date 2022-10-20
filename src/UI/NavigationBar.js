@@ -23,7 +23,7 @@ const NavigationBar = ({ getMove }) => {
 
   return (
     <div className={classes.bar}>
-      <h1>{name}</h1>
+      <h1 className={title}>{name}</h1>
       <Button
         imageSrc={"img/avatar.png"}
         description={"Avatar"}
