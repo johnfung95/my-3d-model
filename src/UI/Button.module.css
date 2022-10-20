@@ -10,8 +10,8 @@
 }
 
 .avatar {
-    max-width: 10rem;
-    height: 10rem;
+    max-width: 7rem;
+    height: 7rem;
     border-radius: inherit;
     object-fit: cover;
 }
