@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import NavigationBar from "./UI/NavigationBar";
+import Container from "./UI/Container";
+import Avatar from "./Models/Avatar";
+import ChickenDance from "./Models/ChickenDance";
+import SillyDance from "./Models/SillyDance";
+const App = () => {
+  const [move, setMove] = useState("AVATAR");
 
-function App() {
+  const getMoveHandler = (newMove) => {
+    console.log(move, newMove);
+    setMove(newMove);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <React.Fragment>
+      <Container>
+        <NavigationBar getMove={getMoveHandler} />
+        <Canvas
+          camera={{
+            position: [0, 0, 12.25],
+            fov: 15,
+          }}
+          style={{
+            backgroundColor: "#111a21",
+            width: "100vw",
+            height: "100vh",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <ambientLight intensity={1.25} />
+          <ambientLight intensity={0.1} />
+          <ambientLight intensity={0.4} />
+          <Suspense fallback={null}>
+            {move === "AVATAR" ? (
+              <Avatar position={[0.025, -0.9, 0]} />
+            ) : move === "CHICKEN" ? (
+              <ChickenDance position={[0.025, -0.9, 0]} />
+            ) : move === "SILLY" ? (
+              <SillyDance position={[0.025, -0.9, 0]} />
+            ) : null}
+          </Suspense>
+          <OrbitControls />
+        </Canvas>
+      </Container>
+    </React.Fragment>
   );
-}
+};
 
 export default App;

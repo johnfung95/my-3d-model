@@ -1,0 +1,17 @@
+.btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    margin: 1rem auto;
+    width: 10rem;
+    height: 10rem;
+}
+
+.avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: inherit;
+    object-fit: cover;
+}
