@@ -28,7 +28,7 @@ const NavigationBar = ({ getMove }) => {
         onClick={getChickenDanceHandler}
       />
       <Button
-        imageSrc={"img/avatar.png"}
+        imageSrc={"img/silly.png"}
         description={"Silly Dance"}
         onClick={getSillyDanceHandler}
       />

@@ -1,5 +1,5 @@
 import classes from "./Button.module.css";
-const Button = ({ onClick, imageSrc, description }) => {
+const Button = ({ imageSrc, description, onClick }) => {
   return (
     <button className={classes.btn}>
       <img
