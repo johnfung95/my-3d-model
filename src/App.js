@@ -36,9 +36,9 @@ const App = () => {
             {move === "AVATAR" ? (
               <Avatar position={[0.025, -0.9, 0]} />
             ) : move === "CHICKEN" ? (
-              <ChickenDance position={[0.025, -0.9, 0]} />
+              <ChickenDance position={[0.15, -0.9, 0]} />
             ) : move === "SILLY" ? (
-              <SillyDance position={[0.025, -0.9, 0]} />
+              <SillyDance position={[0.015, -0.9, 0]} />
             ) : null}
           </Suspense>
           <OrbitControls />
